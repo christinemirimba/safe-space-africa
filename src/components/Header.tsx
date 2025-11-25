@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Shield } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ResourcesDropdown } from "./ResourcesDropdown";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "How It Works", path: "/how-it-works" },
   { name: "About", path: "/about" },
-  { name: "Resources", path: "/resources" },
 ];
 
 export const Header = () => {
@@ -32,25 +32,16 @@ export const Header = () => {
             <Link 
               key={link.path} 
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-secondary ${
                 isActive(link.path) ? 'text-primary' : 'text-muted-foreground'
               }`}
             >
               {link.name}
             </Link>
           ))}
-          <div className="flex items-center space-x-3 ml-4 border-l border-border pl-6">
+          <ResourcesDropdown />
+          <div className="ml-4 border-l border-border pl-4">
             <ThemeToggle />
-            <Link to="/login">
-              <Button variant="ghost" size="sm">
-                Log In
-              </Button>
-            </Link>
-            <Link to="/signup">
-              <Button size="sm" className="bg-primary hover:bg-primary/90">
-                Sign Up
-              </Button>
-            </Link>
           </div>
         </div>
 
@@ -78,7 +69,7 @@ export const Header = () => {
             transition={{ duration: 0.3 }}
             className="border-b border-border bg-background md:hidden"
           >
-            <div className="container mx-auto px-4 py-4">
+            <div className="container mx-auto px-4 py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -87,12 +78,27 @@ export const Header = () => {
                 >
                   <Button
                     variant={isActive(link.path) ? "default" : "ghost"}
-                    className="w-full justify-start transition-smooth"
+                    className="w-full justify-start"
                   >
                     {link.name}
                   </Button>
                 </Link>
               ))}
+              <div className="pt-2 border-t border-border">
+                <p className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase">Resources</p>
+                <Link to="/digital-literacy" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">Digital Literacy</Button>
+                </Link>
+                <Link to="/safety-tools" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">Safety Tools</Button>
+                </Link>
+                <Link to="/settings" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">Settings</Button>
+                </Link>
+                <Link to="/faq" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start">FAQ</Button>
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

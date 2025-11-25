@@ -52,7 +52,7 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-primary/80 min-h-[600px] flex items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-secondary min-h-[600px] flex items-center">
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(255,255,255,0.1),transparent)] opacity-50"></div>
@@ -67,16 +67,16 @@ const Home = () => {
             className="mx-auto max-w-4xl"
           >
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-6xl leading-tight">
-              Advanced Digital Safety Powered by Community
+              Building Safer Digital Spaces for African Women & Girls
             </h1>
             
             <p className="mb-8 text-xl text-white/95 md:text-2xl max-w-3xl leading-relaxed">
-              Get personalized safety assessments in seconds. Our platform analyzes your digital presence to provide accurate risk analysis and actionable insights for a safer online experience.
+              Get personalized safety assessments in seconds. Our AI analyzes your digital presence to provide accurate risk analysis and actionable insights for a safer online experience.
             </p>
             
             <div className="flex flex-col items-start justify-start gap-4 sm:flex-row">
               <Link to="/digital-literacy">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 group shadow-lg">
+                <Button size="lg" className="bg-secondary hover:bg-secondary-light text-white group shadow-lg">
                   Start Your Assessment
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>

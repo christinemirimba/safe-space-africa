@@ -8,40 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Teal Theme - Light Mode */
+    /* Modern Professional Theme - Light Mode */
     --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Teal primary color */
-    --primary: 174 62% 47%;
+    /* Deep indigo/purple primary */
+    --primary: 249 47% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 174 62% 60%;
+    --primary-light: 249 47% 50%;
+    --primary-dark: 249 47% 25%;
     
-    /* Dark teal/slate secondary */
-    --secondary: 210 11% 15%;
+    /* Bright teal secondary */
+    --secondary: 173 80% 30%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 210 11% 25%;
+    --secondary-light: 173 80% 40%;
+    --secondary-dark: 173 80% 20%;
 
-    /* Accent teal */
-    --accent: 174 100% 29%;
+    /* Orange accent for urgency */
+    --accent: 20 95% 48%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 174 100% 40%;
+    --accent-light: 20 95% 60%;
+    --accent-dark: 20 95% 40%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 210 11% 46%;
+    --muted-foreground: 215 16% 47%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 174 62% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 249 47% 35%;
 
     --radius: 0.75rem;
     
@@ -52,40 +55,43 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Modern Teal Theme - Dark Mode */
-    --background: 210 11% 15%;
+    /* Modern Professional Theme - Dark Mode */
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 210 11% 18%;
+    --card: 222 47% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 210 11% 18%;
+    --popover: 222 47% 15%;
     --popover-foreground: 210 40% 98%;
 
-    /* Teal primary - dark mode */
-    --primary: 174 62% 47%;
+    /* Deep indigo/purple primary - dark mode */
+    --primary: 249 47% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 174 62% 60%;
+    --primary-light: 249 47% 60%;
+    --primary-dark: 249 47% 40%;
 
-    /* Secondary - dark mode */
-    --secondary: 210 11% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --secondary-dark: 210 11% 35%;
+    /* Bright teal secondary - dark mode */
+    --secondary: 173 80% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 173 80% 50%;
+    --secondary-dark: 173 80% 30%;
 
-    /* Accent teal - dark mode */
-    --accent: 174 100% 29%;
-    --accent-foreground: 210 40% 98%;
-    --accent-dark: 174 100% 40%;
+    /* Orange accent - dark mode */
+    --accent: 20 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 20 95% 65%;
+    --accent-dark: 20 95% 45%;
 
-    --muted: 210 11% 25%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 11% 25%;
-    --input: 210 11% 25%;
-    --ring: 174 62% 47%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 249 47% 50%;
     
     /* Custom shadows for dark mode */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
