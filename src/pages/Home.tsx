@@ -71,13 +71,13 @@ const Home = () => {
             </h1>
             
             <p className="mb-8 text-xl text-white/95 md:text-2xl max-w-3xl leading-relaxed">
-              Empowering African women and girls with the tools, knowledge, and community to navigate the digital world safely and confidently. Take digital safety assessment now to check your digital hygiene.
+              Empowering African women and girls with the tools, knowledge, and community to navigate the digital world safely and confidently. Take our 2-minute Safety Assessment to determine your immediate digital safety risk and learn essential digital safety skills.
             </p>
             
             <div className="flex flex-col items-start justify-start gap-4 sm:flex-row">
-              <Link to="/digital-literacy">
+              <Link to="/safety-assessment">
                 <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white group shadow-lg">
-                  Start Your Assessment
+                  Safety Assessment
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </Link>

@@ -8,7 +8,10 @@ import { Layout } from "@/components/Layout";
 import Home from "./pages/Home";
 import HowItWorks from "./pages/HowItWorks";
 import DigitalLiteracy from "./pages/DigitalLiteracy";
+import SafetyAssessment from "./pages/SafetyAssessment";
 import SafetyTools from "./pages/SafetyTools";
+import PasswordStrength from "./pages/PasswordStrength";
+import DigitalFootprintAnalyzer from "./pages/DigitalFootprintAnalyzer";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import Settings from "./pages/Settings";
@@ -31,7 +34,10 @@ const App = () => (
               <Route path="/" element={<Home />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/digital-literacy" element={<DigitalLiteracy />} />
+              <Route path="/safety-assessment" element={<SafetyAssessment />} />
               <Route path="/safety-tools" element={<SafetyTools />} />
+              <Route path="/password-strength" element={<PasswordStrength />} />
+              <Route path="/digital-footprint-analyzer" element={<DigitalFootprintAnalyzer />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/about" element={<About />} />
               <Route path="/settings" element={<Settings />} />

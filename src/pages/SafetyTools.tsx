@@ -1,4 +1,5 @@
-import { Shield, Eye, AlertCircle, Lock, Smartphone, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Shield, Eye, AlertCircle, Lock, Smartphone, Globe, Key } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +19,13 @@ const tools = [
     description: "Learn how to use password managers to keep your accounts secure with strong, unique passwords.",
     status: "Available",
     action: "Learn More",
+  },
+  {
+    icon: Key,
+    title: "Password Strength Checker",
+    description: "Test and improve your password security with real-time analysis and strength scoring.",
+    status: "Available",
+    action: "Test Password",
   },
   {
     icon: Eye,
@@ -83,13 +91,30 @@ const SafetyTools = () => {
               <p className="mb-4">
                 If you're experiencing immediate danger or harassment, please contact emergency services or our 24/7 support hotline.
               </p>
+              <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">Documentation (Evidence Gathering)</h4>
+                <p className="text-sm text-blue-700 dark:text-blue-300 mb-2">
+                  The victim is encouraged to collect evidence:
+                </p>
+                <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-1 ml-4">
+                  <li>• Take screenshots of abusive messages or posts</li>
+                  <li>• Save URLs of harmful content</li>
+                  <li>• Record dates and times of incidents</li>
+                  <li>• Document any threats or harassment patterns</li>
+                  <li>• Preserve digital evidence safely and securely</li>
+                </ul>
+              </div>
               <div className="flex flex-col gap-3 sm:flex-row">
-                <Button variant="default" className="bg-accent hover:bg-accent/90">
-                  Call Emergency Hotline
-                </Button>
-                <Button variant="outline">
-                  Chat with Support Team
-                </Button>
+                <Link to="/resources">
+                  <Button variant="default" className="bg-accent hover:bg-accent/90 w-full sm:w-auto">
+                    Call Emergency Hotline
+                  </Button>
+                </Link>
+                <a href="mailto:mirimbachristine@gmail.com?subject=URGENT: Digital Safety Support Needed&body=Dear Support Team,%0D%0A%0D%0AI need immediate assistance with digital safety concerns.%0D%0A%0D%0APlease contact me as soon as possible.%0D%0A%0D%0AThank you.">
+                  <Button variant="outline" className="w-full sm:w-auto">
+                    Chat with Support Team
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
@@ -126,7 +151,13 @@ const SafetyTools = () => {
                       disabled={tool.status === "Coming Soon"}
                       onClick={() => {
                         if (tool.status === "Available") {
-                          alert(`${tool.title} feature coming soon! This will provide: ${tool.description}`);
+                          if (tool.title === "Password Strength Checker") {
+                            window.location.href = "/password-strength";
+                          } else if (tool.title === "Digital Footprint Analyzer") {
+                            window.location.href = "/digital-footprint-analyzer";
+                          } else {
+                            alert(`${tool.title} feature coming soon! This will provide: ${tool.description}`);
+                          }
                         }
                       }}
                     >

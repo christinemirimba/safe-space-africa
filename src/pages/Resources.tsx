@@ -113,9 +113,11 @@ const Resources = () => {
                         <Phone className="h-5 w-5 text-primary" />
                         <span className="text-lg font-semibold">{hotline.phone}</span>
                       </div>
-                      <Button size="sm" className="transition-smooth">
-                        Call Now
-                      </Button>
+                      <a href={`tel:${hotline.phone}`}>
+                        <Button size="sm" className="transition-smooth">
+                          Call Now
+                        </Button>
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
